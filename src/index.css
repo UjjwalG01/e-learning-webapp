@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Montserrat", "Poppins";
+  scroll-behavior: smooth;
+
+  --color: "#FFF4E5";
+
+  --fs-100: 1cqi; /* 22px */
+  --fs-200: 1.3cqi; /* 24px */
+  --fs-300: 1.5cqi; /* 27px */
+  --fs-400: 1.75cqi; /* 32px */
+  --fs-500: 2cqi; /* 36px */
+  --fs-600: 2.3cqi; /* 48px */
+  --fs-700: 2.5cqi; /* 55px */
+  --fs-800: 3cqi; /* 96px */
+  --fs-900: 4.5cqi; /* 111px */
+}
+
+.sample {
+  --fs-100: 1.375cqi; /* 22px */
+  --fs-200: 1.5cqi; /* 24px */
+  --fs-300: 1.6875cqi; /* 27px */
+  --fs-400: 2cqi; /* 32px */
+  --fs-500: 2.25cqi; /* 36px */
+  --fs-600: 3cqi; /* 48px */
+  --fs-700: 3.4375cqi; /* 55px */
+  --fs-800: 6cqi; /* 96px */
+  --fs-900: 6.975cqi; /* 111px */
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.fs-50 {
+  font-size: clamp(0.6em, var(--fs-100) + 1vw, 1em);
+  line-height: 1;
+}
+.fs-100 {
+  font-size: clamp(0.8em, var(--fs-100) + 2vw, 1.1em);
+}
+.fs-200 {
+  font-size: clamp(1.1em, var(--fs-200) + 2vw, 1.3em);
+  line-height: 1;
+}
+.fs-300 {
+  font-size: clamp(1.3em, var(--fs-300) + 2vw, 1.5em);
+}
+.fs-400 {
+  font-size: clamp(1.5em, var(--fs-400) + 2vw, 2em);
+}
+.fs-500 {
+  font-size: clamp(2em, var(--fs-500) + 2vw, 2.3em);
+}
+.fs-600 {
+  font-size: clamp(2.3em, var(--fs-600) + 2vw, 2.5em);
+}
+.fs-700 {
+  font-size: clamp(2.5em, var(--fs-700) + 2vw, 2.7em);
+}
+.fs-800 {
+  font-size: clamp(3em, var(--fs-800) + 1vw, 6em);
+  line-height: 1;
+}
+
+.text-logo {
+  @apply text-[1.5rem];
+}
+.text-nav {
+  @apply text-[1.2rem];
+}
+.text-button {
+  @apply text-[1.1rem];
+}
+
+.text-primary {
+  font-size: clamp();
+}
