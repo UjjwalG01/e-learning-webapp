@@ -20,7 +20,7 @@ export function CourseList({ title, sectionId, lessons }) {
 
     return (
         <Card
-            className="w-full px-4 py-2 rounded-md bg-white text-black cursor-pointer border-x mt-4 lg:mt-0 mb-2 min-h-20 overflow-hidden">
+            className="w-full px-3 lg:px-4 py-2 rounded-md bg-white text-black cursor-pointer border-x mt-3 lg:mt-0 lg:mb-3 min-h-[70px] md:min-h-20 overflow-hidden">
             <motion.div
                 initial={{ height: 0 }}
                 animate={{ height: isOpen ? "auto" : 1 }}
@@ -40,10 +40,10 @@ export function CourseList({ title, sectionId, lessons }) {
                 {lessons.map((item) => (
                     <List onClick={handleLessonClick} key={item.topic} className={`transition-transform duration-200 ${isOpen ? "block" : "hidden"}`}>
                         <ListItem className={`flex items-center gap-2 justify-between border-2 bg-slate-200 -my-0.5 border-white rounded-md ${lesson == item.topic ? "border-2 border-blue-400" : "inactive"}`}>
-                            <span className="fs-50 whitespace-nowrap flex-1 font-normal truncate">
+                            <span className="fs-50 whitespace-nowrap flex-1 font-medium truncate">
                                 {item.topic}
                             </span>
-                            <span className={`flex items-center justify-end font-medium overflow-ellipsis text-sm whitespace-nowrap gap-1.5 rounded px-1 ${lesson == item.topic ? "bg-blue-200" : "inactive"}`}><FiClock className="text-sm" />{item.duration}</span>
+                            <span className={`flex items-center justify-end font-medium overflow-ellipsis fs-50 whitespace-nowrap gap-1.5 rounded px-1 ${lesson == item.topic ? "bg-blue-200" : "inactive"}`}><FiClock className="text-sm" />{item.duration}</span>
                         </ListItem>
                     </List>
                 ))}

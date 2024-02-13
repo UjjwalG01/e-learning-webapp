@@ -11,7 +11,7 @@ export function Button({ goTo, type, className, label, onClick }) {
                 transition={{ duration: 0.2 }}
                 onClick={onClick}
                 type={type}
-                className={twMerge("w-full font-medium fs-50 bg-blue-600 text-white uppercase py-3 px-4 rounded-md", className)}
+                className={twMerge("w-full font-medium fs-100 bg-blue-600 text-white uppercase py-3 px-4 rounded-md", className)}
             >
                 {label}
             </motion.button>
@@ -45,7 +45,7 @@ export function ButtonGray({ goTo, type, className, label, onClick }) {
                 transition={{ duration: 0.2 }}
                 onClick={onClick}
                 type={type}
-                className={twMerge("font-medium fs-50 bg-gray-500 text-white p-4 uppercase rounded-md", className)}
+                className={twMerge("font-medium fs-50 bg-gray-500 text-white py-3 px-4 uppercase rounded-md", className)}
             >
                 {label}
             </motion.button>

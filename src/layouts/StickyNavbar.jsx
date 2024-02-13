@@ -35,7 +35,7 @@ export function StickyNavbar() {
     );
 
     return (
-        <Navbar className="sticky top-0 z-10 h-max max-w-full overflow-y-clip text-black px-4 py-2 lg:px-8 lg:py-4">
+        <Navbar className="sticky top-0 z-10 h-max max-w-full overflow-y-clip text-black px-4 py-2 pb-6 lg:px-8 lg:py-4">
             <div className="flex items-center justify-between text-blue-gray-900 max-w-screen-2xl mx-auto">
                 <Link to={"/"} className="mr-4 cursor-pointer text-logo font-semibold">
                     <img src={logo} className="w-32 block object-cover" alt="" />
@@ -61,10 +61,10 @@ export function StickyNavbar() {
             </div>
             <Collapse open={openNav}>
                 {navList}
-                <div className="flex items-center gap-x-1">
-                    {/* <Button label={"Log In"} className="bg-gray-400" type="button" onClick={() => navigate("/login")} /> */}
-                    <Button label={"Sign Up"} className="bg-gray-400" type="button" onClick={() => navigate("/signup")} />
-                </div>
+                {/* <div className="flex items-center gap-x-1"> */}
+                {/* <Button label={"Log In"} className="bg-gray-400" type="button" onClick={() => navigate("/login")} /> */}
+                <Button label={"Sign Up"} className="bg-gray-400" type="button" onClick={() => navigate("/signup")} />
+                {/* </div> */}
             </Collapse>
         </Navbar>
     );

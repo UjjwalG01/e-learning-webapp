@@ -32,6 +32,10 @@
 }
 
 @layer utilities {
+  body {
+    @apply bg-slate-100;
+  }
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -42,6 +46,16 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+}
+
+.line-1 {
+  line-height: 1;
+}
+.line-2 {
+  line-height: 1.1;
+}
+.line-3 {
+  line-height: 1.2;
 }
 
 .fs-50 {
