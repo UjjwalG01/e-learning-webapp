@@ -1,11 +1,13 @@
 import { List, ListItem, Card, Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaChevronDown, FaChevronUp, FaLock } from "react-icons/fa6";
 import { FiClock } from "react-icons/fi";
+import { ExampleWrapper } from "../../../components/ExampleWrapper";
 
 export function CourseList({ title, sectionId, lessons }) {
     const [isOpen, setIsOpen] = useState(false);
+    const [showMessage, setShowMessage] = useState(false);
     const handleShow = () => {
         setIsOpen(!isOpen);
     }
@@ -14,13 +16,15 @@ export function CourseList({ title, sectionId, lessons }) {
         if (e.target.classList.contains("inactive")) {
             setLesson("")
         }
-        setLesson(e.target.innerText);
         e.stopPropagation();
+        setLesson(e.target.innerText);
+        setShowMessage(true)
     }
 
     return (
         <Card
-            className="w-full px-3 lg:px-4 py-2 rounded-md bg-white text-black cursor-pointer border-x mt-3 lg:mt-0 lg:mb-3 min-h-[70px] md:min-h-20 overflow-hidden">
+            className="w-full px-3 py-2 rounded-md bg-white text-black cursor-pointer border-x mt-2 lg:mt-0 lg:mb-3 min-h-[60px] md:min-h-20 overflow-hidden">
+            <ExampleWrapper showMessage={showMessage} setShowMessage={setShowMessage} />
             <motion.div
                 initial={{ height: 0 }}
                 animate={{ height: isOpen ? "auto" : 1 }}
@@ -28,7 +32,7 @@ export function CourseList({ title, sectionId, lessons }) {
                 exit={{ height: 0 }}
             >
                 <div onClick={handleShow} className="flex justify-between py-1 items-center px-1 lg:px-2 font-semibold">
-                    <h2 className="fs-100 h-fit font-medium">{sectionId}. {title}</h2>
+                    <h2 className="fs-100 h-fit flex items-baseline gap-1 font-medium">{sectionId}. {title}</h2>
                     <span className="text-base">
                         {isOpen ? (
                             <FaChevronUp />

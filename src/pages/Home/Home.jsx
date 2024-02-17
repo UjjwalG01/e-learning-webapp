@@ -23,7 +23,7 @@ export function Home() {
             <CourseSection />
             <TestimonialSection />
             <PricingSection />
-            <FAQsSection />
+            <FAQsSection className={"lg:max-w-[90rem]"} />
         </motion.main>
     )
 }

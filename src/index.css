@@ -60,7 +60,7 @@
 
 .fs-50 {
   font-size: clamp(0.6em, var(--fs-100) + 1vw, 1em);
-  line-height: 1;
+  /* line-height: 1; */
 }
 .fs-100 {
   font-size: clamp(0.8em, var(--fs-100) + 2vw, 1.1em);

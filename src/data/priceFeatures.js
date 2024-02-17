@@ -49,4 +49,23 @@ export const features = [
     plan: "pro",
     title: "Early access to new courses and updates.",
   },
+  { isAvailable: true, plan: "basic", title: "All available free packages." },
+  { isAvailable: true, plan: "basic", title: "Recorded video lecture." },
+  { isAvailable: true, plan: "basic", title: "Doubt session with instructor" },
+  {
+    isAvailable: true,
+    plan: "basic",
+    title: "Priority support from instructors..",
+  },
+  {
+    isAvailable: true,
+    plan: "basic",
+    title: "Unlimited access to all courses.",
+  },
+  { isAvailable: true, plan: "basic", title: "Ad-free experience." },
+  {
+    isAvailable: false,
+    plan: "basic",
+    title: "Unlimited course materials and resources.",
+  },
 ];

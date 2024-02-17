@@ -17,7 +17,9 @@
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.7.0",
     "react-router-dom": "^6.21.1",
+    "react-tsparticles": "^2.12.2",
     "tailwind-merge": "^2.2.1",
+    "tsparticles": "^2.0.6",
     "tw-merge": "^0.0.1-alpha.3"
   },
   "devDependencies": {

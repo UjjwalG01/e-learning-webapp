@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { Features } from "./Features"
 import { features } from "../../../data/priceFeatures"
 
-export function PriceCard({ plan, price }) {
+export function PriceCard({ plan, price, duration }) {
     const controls = useAnimation();
     const [ref, inView] = useInView({ triggerOnce: true })
 
@@ -24,7 +24,7 @@ export function PriceCard({ plan, price }) {
                 <span className="w-full text-center py-2 border border-gray-200 rounded bg-blue-50 capitalize fs-100 font-semibold">{plan} Plan</span>
                 <div className="flex gap-2 items-baseline justify-center my-6">
                     <span className="fs-800 font-semibold">${price}</span>
-                    <span className="fs-200 font-medium">/ month</span>
+                    <span className="fs-200 font-medium">/ {duration}</span>
                 </div>
                 <span className="fs-200 font-semibold mb-4">Available Features</span>
                 <ul className="list-none">

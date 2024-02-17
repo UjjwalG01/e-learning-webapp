@@ -1,10 +1,10 @@
 import { Card } from "@material-tailwind/react";
 import { ButtonSm } from "../../../components/Button";
 
-export function TestimonialCard({ review, image, author, link }) {
+export function TestimonialCard({ review, image, author, link, className }) {
     return (
-        <Card className="flex bg-white flex-col justify-center rounded-md p-4 my-2 lg:py-8 lg:px-6 gap-3 min-h-[280px]">
-            <p className="fs-100 font-normal text-left">{review}</p>
+        <Card className={`flex bg-white flex-col justify-center max-w-[50rem] rounded-md p-4 my-2 lg:py-8 lg:px-6 gap-3 min-h-[270px] ${className}`}>
+            <p className="fs-100 font-medium text-left">{review}</p>
             <div className="flex justify-between items-center my-2">
                 <span className="flex items-center gap-2">
                     <img className="block max-w-16 rounded object-cover aspect-square" src={image} alt="Testimonial Image" />

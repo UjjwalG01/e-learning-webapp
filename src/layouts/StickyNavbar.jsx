@@ -26,10 +26,11 @@ export function StickyNavbar() {
     }, []);
 
     const navList = (
-        <ul className="mt-2 mb-4 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-12">
+        <ul className="mt-2 mb-4 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
             <NavlinkItem label={"Home"} to={"/"} />
             <NavlinkItem label={"Courses"} to={"/courses"} />
             <NavlinkItem label={"About"} to={"/about"} />
+            <NavlinkItem label={"Pricing"} to={"/pricing"} />
             <NavlinkItem label={"Contact"} to={"/contact"} />
         </ul>
     );
@@ -43,7 +44,7 @@ export function StickyNavbar() {
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>
                     <div className="items-center gap-x-1 hidden lg:flex">
-                        <Button label={"Sign Up"} className="hidden lg:inline-block bg-gray-400 hover:bg-blue-600" type="button" onClick={() => navigate("/signup")} />
+                        <Button label={"Log In"} className="hidden lg:inline-block bg-gray-400 hover:bg-blue-600" type="button" goTo={"/login"} />
                     </div>
                     <IconButton
                         variant="text"
@@ -61,10 +62,8 @@ export function StickyNavbar() {
             </div>
             <Collapse open={openNav}>
                 {navList}
-                {/* <div className="flex items-center gap-x-1"> */}
                 {/* <Button label={"Log In"} className="bg-gray-400" type="button" onClick={() => navigate("/login")} /> */}
-                <Button label={"Sign Up"} className="bg-gray-400" type="button" onClick={() => navigate("/signup")} />
-                {/* </div> */}
+                <Button label={"Log In"} className="bg-gray-400" type="button" goTo={"/login"} />
             </Collapse>
         </Navbar>
     );
