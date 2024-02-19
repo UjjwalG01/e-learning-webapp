@@ -7,7 +7,7 @@ export function FooterNav({ title, items, className }) {
             <ul className="flex flex-col gap-1">
                 {items.map((item, index) => (
                     // to be updated
-                    <Link key={index} to={"#"} href={item.link} className="fs-100 font-medium">{item.name}</Link>
+                    <Link key={index} to={item.link} className="fs-100 font-medium">{item.name}</Link>
                 ))}
             </ul>
         </div>

@@ -14,8 +14,8 @@ export function LandingSection() {
             <p className="fs-400 font-medium ">with Online Design and Development Courses.</p>
             <div className="fs-100 ">Learn from Industry Experts and Enhance Your Skills.</div>
             <div className="flex gap-3 mt-8">
-                <ButtonSm label={"Explore Courses"} type={"button"} />
-                <ButtonGray label={"View Pricing"} type={"button"} />
+                <ButtonSm goTo={"/courses"} label={"Explore Courses"} type={"button"} />
+                <ButtonGray goTo={"/pricing"} label={"View Pricing"} type={"button"} />
             </div>
         </section>
     )
