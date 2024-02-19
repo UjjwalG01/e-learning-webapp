@@ -17,14 +17,14 @@ export function AnimatedRoutes() {
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
-                <Route path="courses" element={<Courses />} />
-                <Route path="course/:id" element={<SingleCourse />} />
-                <Route path="about" element={<About />} />
-                <Route path="pricing" element={<Pricing />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="login" element={<UserIndex />} />
+                <Route path="/courses" element={<Courses />} />
+                <Route path="/course/:id" element={<SingleCourse />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<UserIndex />} />
                 <Route element={<ProtectedRoute />}>
-                    <Route path="profile" element={<Profile />} />
+                    <Route path="/profile" element={<Profile />} />
                 </Route>
             </Routes>
         </AnimatePresence>

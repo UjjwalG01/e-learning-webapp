@@ -2,7 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { useState } from "react";
 
 export function CurriculumCard({ items }) {
-    const [showCurriculum, setShowCurriculum] = useState(true);
+    const [showCurriculum, setShowCurriculum] = useState(false);
     return (
         <div className="flex flex-col gap-2 pt-4 px-2 rounded-md">
             <Button onClick={() => setShowCurriculum(!showCurriculum)} className={`text-slate-100 my-2 md:hidden bg-blue-500`}>{showCurriculum ? "Hide" : "See"} Curriculum</Button>

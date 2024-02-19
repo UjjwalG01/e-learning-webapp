@@ -12,7 +12,7 @@ export function ContactFormSection() {
                 {/* <div className="absolute -left-[5.5rem] top-24 z-10 bg-blue-500 rounded-t-lg text-white p-2 -rotate-90">
                     <h2 className="fs-200 font-semibold px-3">Contact Info</h2>
                 </div> */}
-                <form className="bg-slate-300 px-4 py-8 rounded-md shadow-md">
+                <form className="bg-slate-300 px-6 py-8 rounded-md shadow-md">
                     <h2 className="fs-300 uppercase font-semibold my-3">Send us a message</h2>
                     <div className="flex flex-col gap-2">
                         <input className="px-2 h-11 rounded-md my-1 fs-100 outline-none " type="text" placeholder="Name" />

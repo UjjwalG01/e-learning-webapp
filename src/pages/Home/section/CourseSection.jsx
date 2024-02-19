@@ -5,7 +5,7 @@ import { SectionHead } from "../components/SectionHead";
 export function CourseSection() {
     return (
         <section className="my-8 lg:my-10 px-4 lg:px-10">
-            <SectionHead label={"Our Courses"} btnLabel={"View All"} description={"Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."} />
+            <SectionHead label={"Our Courses"} link={"/courses"} btnLabel={"View All"} description={"Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites."} />
             <ul className="grid lg:grid-cols-2 gap-4 lg:gap-6 xl:gap-8 ">
                 {courses.map((course, index) => {
                     if (index >= 6) return;
