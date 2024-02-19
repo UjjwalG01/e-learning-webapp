@@ -10,19 +10,21 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
 import { Pricing } from "../pages/Pricing/Pricing"
 import { Contact } from "../pages/contact/Contact"
+import ErrorPage from "../pages/Error/ErrorPage"
 
 export function AnimatedRoutes() {
     const location = useLocation();
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Home />} />
+                <Route path="/" index element={<Home />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/course/:id" element={<SingleCourse />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<UserIndex />} />
+                <Route path="*" element={<ErrorPage />} />
                 <Route element={<ProtectedRoute />}>
                     <Route path="/profile" element={<Profile />} />
                 </Route>
